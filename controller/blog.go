@@ -4,7 +4,6 @@ import (
 	"net/http"
 	"portfolio/pagination"
 	"portfolio/service"
-	"portfolio/utils"
 	"strconv"
 
 	"portfolio/model"
@@ -47,12 +46,6 @@ func GetAllPostsReverse(c *gin.Context) {
 
 func GetPosts(c *gin.Context) {
 	h := service.Blog{}
-	a := service.Analytics{}
-	analytics := utils.AddAccess(c)
-
-	if err := a.AddAnalytics(analytics); err != nil {
-		c.JSONP(http.StatusInternalServerError, nil)
-	}
 
 	// クエリパラメータの実装
 	page, _ := strconv.Atoi(c.DefaultQuery("page", "1"))
