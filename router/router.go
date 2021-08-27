@@ -115,6 +115,8 @@ func Router() *gin.Engine {
 		conditionrouter.GET("", controller.GetAllCondition)
 	}
 
+	r.POST("/analytics", controller.Analytics)
+
 	r.POST("/graphql", gql.Response)
 	r.POST("/graphql/condition", gql.ConditionResponse)
 

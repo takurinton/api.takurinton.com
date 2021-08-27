@@ -46,6 +46,7 @@ func GetAllPostsReverse(c *gin.Context) {
 
 func GetPosts(c *gin.Context) {
 	h := service.Blog{}
+
 	// クエリパラメータの実装
 	page, _ := strconv.Atoi(c.DefaultQuery("page", "1"))
 	_category := c.DefaultQuery("category", "")
