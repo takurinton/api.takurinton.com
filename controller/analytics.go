@@ -16,8 +16,5 @@ func Analytics(c *gin.Context) {
 		return
 	}
 
-	// analytics.Domain = "hoge"
-	// analytics.Path = "/hoge"
-	// analytics.UA = "Mac"
 	h.AddAnalytics(analytics)
 }

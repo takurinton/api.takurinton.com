@@ -4,7 +4,7 @@ import "time"
 
 type Analytics struct {
 	Id        int64     `gorm:"primary_key" json:"id"`
-	Domain    string    `json:"title"`
+	Domain    string    `json:"domain"`
 	UA        string    `json:"ua"`
 	Path      string    `json:"path"`
 	CreatedAt time.Time `json:"created_at"`
